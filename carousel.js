@@ -25,7 +25,7 @@ const changeDot = (currentDot, targetDot) => {
     targetDot.classList.add('indicator-dot--current');
 };
 
-const hideBtn = (slides, prevBtn, nextBtn, index) => {
+const hideBtn = (prevBtn, nextBtn, index) => {
     if (index === 0) {
         prevBtn.classList.add('is-hidden');
         nextBtn.classList.remove('is-hidden');
@@ -40,7 +40,7 @@ const hideBtn = (slides, prevBtn, nextBtn, index) => {
     }
 };
 
-hideBtn(slides, prevBtn, nextBtn, 0);
+hideBtn(prevBtn, nextBtn, 0);
 
 // when clicking left button, carousel slides left, indicator dot changes
 prevBtn.addEventListener('click', e => {
@@ -54,7 +54,7 @@ prevBtn.addEventListener('click', e => {
 
     changeDot(currentDot, prevDot);
 
-    hideBtn(slides, prevBtn, nextBtn, index);
+    hideBtn(prevBtn, nextBtn, index);
 })
 
 // when clicking right button, carousel slides right, indicator dot changes
@@ -69,7 +69,7 @@ nextBtn.addEventListener('click', e => {
 
     changeDot(currentDot, nextDot);
 
-    hideBtn(slides, prevBtn, nextBtn, index);
+    hideBtn(prevBtn, nextBtn, index);
 });
 
 
@@ -87,5 +87,5 @@ indicatorDots.addEventListener('click', e => {
 
     moveToSlide(track, currentSlide, targetSlide);
 
-    hideBtn(slides, prevBtn, nextBtn, index);
+    hideBtn(prevBtn, nextBtn, index);
 });
