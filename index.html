@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carousel</title>
+</head>
+<body>
+    <div class="carousel">
+            <button class="carousel__btn carousel__btn--left">
+                <img class="carousel__btn-svg" src="images/left.svg" alt="">
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide carousel__slide--current">
+                        <img class="carousel__img" src="images/egg-head.jpg" alt="an old egg">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__img" src="images/frog-dog.jpg" alt="a frog/dog">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__img" src="images/tha-captain.webp" alt="probably a pirate">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__img" src="images/i-want-u.jpg" alt="hacker">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__img" src="images/blazin.jpg" alt="daddy musk">
+                    </li>
+                </ul>            
+            </div>
+            <button class="carousel__btn carousel__btn--right">
+                <img class="carousel__btn-svg" src="images/right.svg" alt="">
+            </button>
+        
+        <div class="img-indicators">
+            <button class="indicator-dot indicator-dot--current"></button>
+            <button class="indicator-dot"></button>
+            <button class="indicator-dot"></button>
+            <button class="indicator-dot"></button>
+            <button class="indicator-dot"></button>
+        </div>
+    </div>
+
+
+    <script src="carousel.js"></script>
+</body>
+</html>
